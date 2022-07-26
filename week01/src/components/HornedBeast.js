@@ -3,17 +3,26 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 class HornedBeast extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      favorite : 0,
+    }
+  }
+
+  favoriteClick = () => {
+    this.setState({favorite:this.state.favorite+1})
+  }
     render(){
         return <>
 
-    <Card style={{ width: '15rem' , display: 'inline-block' , hieght:'10rem' , marginLeft:'5rem'}}>
-      <Card.Img variant="top" src={this.props.imageUrl} />
+    <Card style={{ width: '18rem', display: 'inline-block' , margin:'1rem'}}>
+      <Card.Img variant="top" src={this.props.imageUrl}  style={{ hieght:'10vh' }} onClick={this.favoriteClick}/>
       <Card.Body>
-        <Card.Title>{this.props.title}</Card.Title>
+        <Card.Title>{this.props.title} 💗 {this.state.favorite}</Card.Title>
         <Card.Text>
             {this.props.description}
         </Card.Text>
-        <Button variant="primary">Vote</Button>
       </Card.Body>
     </Card>
         </>
