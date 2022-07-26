@@ -1,11 +1,21 @@
 import React from "react";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 class HornedBeast extends React.Component {
     render(){
         return <>
-        <h2>{this.props.title}</h2>
-        <img src={this.props.imageUrl} alt={this.props.title}/>
-        <p>{this.props.description}</p>
+
+    <Card style={{ width: '15rem' , display: 'inline-block' , hieght:'10rem' , marginLeft:'5rem'}}>
+      <Card.Img variant="top" src={this.props.imageUrl} />
+      <Card.Body>
+        <Card.Title>{this.props.title}</Card.Title>
+        <Card.Text>
+            {this.props.description}
+        </Card.Text>
+        <Button variant="primary">Vote</Button>
+      </Card.Body>
+    </Card>
         </>
     }
 }
