@@ -9,8 +9,8 @@ class Main extends React.Component {
         return <>
         <Row xs={1} md={3} className="g-4"/>
         {
-            data.map((item , idx) =>
-                <HornedBeast title={item.title} imageUrl={item.image_url} description={item.description}/>
+            this.props.allBeast.map((item , idx) =>
+                <HornedBeast  displayModel={item.displayModel}  key={idx} title={item.title} imageUrl={item.image_url} description={item.description}/>
                  )
         }
         </>

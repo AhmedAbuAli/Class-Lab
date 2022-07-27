@@ -1,6 +1,6 @@
 import React from "react";
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import App from "../App";
 
 class HornedBeast extends React.Component {
   constructor(props){
@@ -12,12 +12,13 @@ class HornedBeast extends React.Component {
 
   favoriteClick = () => {
     this.setState({favorite:this.state.favorite+1})
+    //this.props.displayModel()
   }
     render(){
         return <>
 
-    <Card style={{ width: '18rem', display: 'inline-block' , margin:'1rem'}}>
-      <Card.Img variant="top" src={this.props.imageUrl}  style={{ hieght:'10vh' }} onClick={this.favoriteClick}/>
+    <Card style={{ width: '40vh', hieght:'20vh', display: 'inline-block' , margin:'1rem' , backgroundColor:'black' , color:'white'}}>
+      <Card.Img variant="top" src={this.props.imageUrl}  style={{ hieght:'100%' , width: '100%' }} onClick={this.favoriteClick}/>
       <Card.Body>
         <Card.Title>{this.props.title} 💗 {this.state.favorite}</Card.Title>
         <Card.Text>

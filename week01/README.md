@@ -19,3 +19,15 @@
 ## Finish time: 9:30 PM
 
 ## Actual time needed to complete: 4 hours
+
+# Day03
+
+## Number and name of feature: 2 ( Added Modal  to Horned Beast Project)
+
+## Estimate of time needed to complete: 1 hour
+
+## Start time: 5:30 PM
+
+## Finish time: 9:30 PM
+
+## Actual time needed to complete: 4 hours
